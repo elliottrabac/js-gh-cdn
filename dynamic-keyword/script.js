@@ -193,23 +193,3 @@ function updateDynamicKeywords() {
   } else {
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  updateDynamicKeywords();
-});
-document.addEventListener("locationchange", function () {
-  updateDynamicKeywords();
-});
-document.addEventListener("load", function () {
-  updateDynamicKeywords();
-});
-document.addEventListener("load", function () {
-  setTimeout(updateDynamicKeywords, 200);
-  setTimeout(updateDynamicKeywords, 1000);
-});
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(updateDynamicKeywords, 200);
-  setTimeout(updateDynamicKeywords, 1000);
-});
-window.addEventListener("mutiny:experience-impression", function (event) {
-  updateDynamicKeywords();
-});
