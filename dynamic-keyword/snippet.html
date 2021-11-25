@@ -1,6 +1,6 @@
 <!-- gorgias script for custom code -->
 <script id="gorgias-script" type="text/javascript">
-  (function () {
+  !(function () {
     // use a different branch in debug mode
     var url = new URL(window.location.href);
     var debug = url.searchParams.get("debug");
@@ -10,7 +10,12 @@
       "https://cdn.jsdelivr.net/gh/elliottrabac/js-gh-cdn@" +
       v +
       "/dynamic-keyword/script.min.js";
-    s.async = 1;
-    d.getElementsByTagName("head")[0].appendChild(s);
+    s.async = 0;
+    document.getElementsByTagName("head")[0].appendChild(s);
+    s.addEventListener("load", function (event) {
+      updateDynamicKeywords();
+      setTimeout(updateDynamicKeywords, 200);
+      setTimeout(updateDynamicKeywords, 1000);
+    });
   })();
 </script>

@@ -105,7 +105,7 @@ function updateDynamicKeywords() {
     freshchat: { competitor_snippet: "FreshChat", competitor_logo: "" },
     olark: { competitor_snippet: "OlarK", competitor_logo: "" },
     tawk: { competitor_snippet: "Tawk.io", competitor_logo: "" },
-    zopim: { competitor_snippet: "Zopim", competitor_logo: "" },
+    zopim: { competitor_snippet: "Zopi", competitor_logo: "" },
     replyco: { competitor_snippet: "Replyco", competitor_logo: "" },
   };
 
@@ -193,23 +193,3 @@ function updateDynamicKeywords() {
   } else {
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  updateDynamicKeywords();
-});
-document.addEventListener("locationchange", function () {
-  updateDynamicKeywords();
-});
-document.addEventListener("load", function () {
-  updateDynamicKeywords();
-});
-document.addEventListener("load", function () {
-  setTimeout(updateDynamicKeywords, 200);
-  setTimeout(updateDynamicKeywords, 1000);
-});
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(updateDynamicKeywords, 200);
-  setTimeout(updateDynamicKeywords, 1000);
-});
-window.addEventListener("mutiny:experience-impression", function (event) {
-  updateDynamicKeywords();
-});
