@@ -1,0 +1,16 @@
+<!-- gorgias script for custom code -->
+<script id="gorgias-script" type="text/javascript">
+  (function () {
+    // use a different branch in debug mode
+    var url = new URL(window.location.href);
+    var debug = url.searchParams.get("debug");
+    var v = debug ? "develop" : "main";
+    var s = document.createElement("script");
+    s.src =
+      "https://cdn.jsdelivr.net/gh/elliottrabac/js-gh-cdn@" +
+      v +
+      "/dynamic-keyword/script.min.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>
