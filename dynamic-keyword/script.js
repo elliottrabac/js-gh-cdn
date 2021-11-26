@@ -203,6 +203,14 @@ function updateDynamicKeywords() {
     // do nothing
   }
 
+  if (
+    window.location.pathname == "/valentin/dynamic-keywords" &&
+    (keyword.includes("magento") || keyword.includes("bigcommerce"))
+  ) {
+    document.querySelector("div.wrapper-reviews-link.left").remove();
+    document.querySelector("div.partner-badge-container").remove();
+  }
+
   if (window.location.pathname == "/dl/competitor-support") {
     if (
       mapping[dynamic_keyword] &&
