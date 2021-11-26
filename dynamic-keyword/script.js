@@ -171,15 +171,24 @@ function updateDynamicKeywords() {
       });
   }
 
-  if (
-    mapping[dynamic_keyword] &&
-    mapping[dynamic_keyword]["competitor_logo"] !== ""
-  ) {
-    document.querySelector("img.logo-competitor").src =
-      mapping[dynamic_keyword]["competitor_logo"];
+  if (keyword.includes("helpdesk")) {
+    document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
+      ele.innerHTML = "Helpdesk";
+    });
+  } else if (keyword.includes("customer") && keyword.includes("support")) {
+    document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
+      ele.innerHTML = "Customer Support";
+    });
+  } else if (keyword.includes("customer") && keyword.includes("service")) {
+    document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
+      ele.innerHTML = "Customer Service";
+    });
+  } else if (keyword.includes("live-chat")) {
+    document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
+      ele.innerHTML = "Live Chat";
+    });
   } else {
-    document.querySelector("img.logo-competitor").style = "display:none";
-    document.querySelector("img.logo-gorgias").style = "display:none";
+    // do nothing
   }
 
   if (keyword.includes("magento")) {
@@ -191,5 +200,19 @@ function updateDynamicKeywords() {
       ele.innerHTML = "BigCommerce";
     });
   } else {
+    // do nothing
+  }
+
+  if (window.location.pathname == "/dl/competitor-support") {
+    if (
+      mapping[dynamic_keyword] &&
+      mapping[dynamic_keyword]["competitor_logo"] !== ""
+    ) {
+      document.querySelector("img.logo-competitor").src =
+        mapping[dynamic_keyword]["competitor_logo"];
+    } else {
+      document.querySelector("img.logo-competitor").style = "display:none";
+      document.querySelector("img.logo-gorgias").style = "display:none";
+    }
   }
 }
