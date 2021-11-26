@@ -204,7 +204,7 @@ function updateDynamicKeywords() {
   }
 
   if (
-    window.location.pathname == "/valentin/dynamic-keywords" &&
+    window.location.pathname == "/dl/customer-support" &&
     (keyword.includes("magento") || keyword.includes("bigcommerce"))
   ) {
     document.querySelector("div.wrapper-reviews-link.left").remove();
