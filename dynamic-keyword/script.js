@@ -105,7 +105,7 @@ function updateDynamicKeywords() {
     freshchat: { competitor_snippet: "FreshChat", competitor_logo: "" },
     olark: { competitor_snippet: "OlarK", competitor_logo: "" },
     tawk: { competitor_snippet: "Tawk.io", competitor_logo: "" },
-    zopim: { competitor_snippet: "Zopim", competitor_logo: "" },
+    zopim: { competitor_snippet: "Zopi", competitor_logo: "" },
     replyco: { competitor_snippet: "Replyco", competitor_logo: "" },
   };
 
@@ -170,6 +170,7 @@ function updateDynamicKeywords() {
         ele.innerHTML = mapping[dynamic_keyword]["competitor_snippet"];
       });
   }
+
 
   if (keyword.includes("desk")) {
     document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
