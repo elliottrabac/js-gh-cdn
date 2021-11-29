@@ -171,7 +171,8 @@ function updateDynamicKeywords() {
       });
   }
 
-  if (keyword.includes("helpdesk")) {
+
+  if (keyword.includes("desk")) {
     document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
       ele.innerHTML = "Helpdesk";
     });
@@ -183,9 +184,13 @@ function updateDynamicKeywords() {
     document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
       ele.innerHTML = "Customer Service";
     });
-  } else if (keyword.includes("live-chat")) {
+  } else if (keyword.includes("live") && keyword.includes("chat")) {
     document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
       ele.innerHTML = "Live Chat";
+    });
+  } else if (keyword.includes("ticket")) {
+    document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
+      ele.innerHTML = "Ticketing";
     });
   } else {
     // do nothing
