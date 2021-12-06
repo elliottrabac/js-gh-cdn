@@ -171,7 +171,6 @@ function updateDynamicKeywords() {
       });
   }
 
-
   if (keyword.includes("desk")) {
     document.querySelectorAll("span.js-category").forEach(function (ele, idx) {
       ele.innerHTML = "Helpdesk";
@@ -226,6 +225,9 @@ function updateDynamicKeywords() {
     } else {
       document.querySelector("img.logo-competitor").style = "display:none";
       document.querySelector("img.logo-gorgias").style = "display:none";
+    }
+    if (keyword.includes("magento") || keyword.includes("bigcommerce")) {
+      document.querySelector("div.wrapper-reviews-shopify").remove();
     }
   }
 }
