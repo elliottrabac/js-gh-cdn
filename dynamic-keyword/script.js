@@ -215,7 +215,7 @@ function updateDynamicKeywords() {
     document.querySelector("div.partner-badge-container").remove();
   }
 
-  if (window.location.pathname == "/dl/competitor-support") {
+  if (window.location.pathname.includes("/dl/competitor-support")) {
     if (
       mapping[dynamic_keyword] &&
       mapping[dynamic_keyword]["competitor_logo"] !== ""
